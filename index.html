@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Наряди ёлочку</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Обертка для центрирования игрового поля -->
+  <div id="game-wrapper">
+    <!-- Адаптивный контейнер-сцена для всех элементов комнаты -->
+    <div id="scene-container">
+    <!-- Фон комнаты -->
+    <div class="room-background"></div>
+
+    <!-- Камин -->
+    <div id="fireplace-container">
+      <img id="fireplace" src="assets/images/fireplace.png" alt="Камин">
+      <div id="fireplace-flame"></div>
+    </div>
+    
+    <!-- Гирлянда на камине -->
+    <img id="fireplace-decoration" src="assets/images/decoration.png" alt="Гирлянда">
+
+    <!-- Окно с снежинками -->
+    <div id="window-container">
+      <div id="snowflakes-container">
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+        <div class="snowflake"></div>
+      </div>
+      <img id="window" src="assets/images/window.png" alt="Окно">
+    </div>
+
+    <div id="tree-with-star">
+      <img id="tree" src="assets/images/tree.png" alt="Ёлка">
+      <img id="star" src="assets/images/star.png" alt="Звезда">
+    </div>
+
+    <div id="boxes-container">
+      <img class="box" data-box="1" src="assets/images/box1.png" alt="Коробка 1">
+      <img class="box" data-box="2" src="assets/images/box2.png" alt="Коробка 2">
+      <img class="box" data-box="3" src="assets/images/box3.png" alt="Коробка 3">
+    </div>
+    
+    <!-- Декоративные коробки -->
+    <img id="gift1" class="gift" src="assets/images/gift1.png" alt="Подарок 1">
+    <img id="gift2" class="gift" src="assets/images/gift2.png" alt="Подарок 2">
+    
+    <!-- Кот -->
+    <img id="cat" src="assets/images/cat.png" alt="Кот">
+    
+    <!-- Хлопушка -->
+    <img id="fireworks" src="assets/images/fireworks.png" alt="Хлопушка">
+    
+    <!-- Кукла -->
+    <img id="doll-gift" src="assets/images/doll-gift.png" alt="Кукла">
+    </div>
+  </div>
+
+  <!-- Панель управления (вне сцены, всегда доступна) -->
+  <div id="control-panel">
+    <!-- Инструкция для игрока -->
+    <div id="instruction-panel">Наряди елочку игрушками, гирляндами и мишурой, а когда будет готово - жми на хлопушку!</div>
+    
+    <!-- Кнопка "Играть" / "Играть сначала" -->
+    <button id="restart-game">▶ Играть</button>
+
+    <!-- Кнопка "Включить звуки" -->
+    <button id="toggle-sound">🔊 Включить звуки</button>
+  </div>
+
+  <!-- Подключение скрипта -->
+  <script src="script.js"></script>
+</body>
+</html>

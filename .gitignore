@@ -1,6 +1,58 @@
 # Игнорировать системные файлы
 .DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
 Thumbs.db
+Desktop.ini
 
 # Игнорировать временные файлы редакторов
 *.tmp
+*.temp
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Игнорировать логи
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Игнорировать зависимости (если будут добавлены)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Игнорировать файлы сборки (если будут добавлены)
+dist/
+build/
+*.min.js
+*.min.css
+
+# Игнорировать резервные копии
+*.bak
+*.backup
+*_BACKUP
+*_backup
+
+# Игнорировать локальные настройки
+.env
+.env.local
+.env.*.local
+
+# Игнорировать файлы операционной системы
+.DS_Store?
+.AppleDouble
+.LSOverride
+
+# Игнорировать файлы Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
