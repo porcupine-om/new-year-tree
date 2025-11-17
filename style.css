@@ -596,6 +596,30 @@ body {
     inset 0 -2px 4px rgba(0, 0, 0, 0.3);
 }
 
+/* ========== СООБЩЕНИЕ ДЛЯ МОБИЛЬНЫХ УСТРОЙСТВ ========== */
+#mobile-message {
+  display: none; /* По умолчанию скрыто на десктопе */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-width: 90%;
+  text-align: center;
+}
+
+#mobile-message p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  line-height: 1.6;
+}
+
 /* ========== ИГРУШКИ И УКРАШЕНИЯ ========== */
 #toys-container {
   position: absolute;
@@ -730,70 +754,39 @@ body {
 
 /* Мобильные устройства (< 768px) */
 @media screen and (max-width: 768px) {
-  /* Игровое поле масштабируется автоматически благодаря aspect-ratio и rem */
-  /* Панель управления переносится вниз и по центру */
-  #control-panel {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 8px; /* Используем px для фиксированного размера */
-    padding: 10px; /* Используем px для фиксированного размера */
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(10px); /* Используем px для фиксированного размера */
-  }
-
-  #instruction-panel {
-    width: 100%;
-    max-width: 320px; /* Используем px для фиксированного размера */
-    font-size: 12px; /* Используем px для фиксированного размера */
-    padding: 8px 12px; /* Используем px для фиксированного размера */
-    order: 3;
-  }
-
-  #restart-game,
-  #toggle-sound {
-    font-size: 12px; /* Используем px для фиксированного размера */
-    padding: 8px 16px; /* Используем px для фиксированного размера */
-    flex: 1;
-    min-width: 128px; /* Используем px для фиксированного размера */
-  }
-
-  #restart-game {
-    order: 1;
-  }
-
-  #toggle-sound {
-    order: 2;
-  }
-
-  /* Уменьшаем padding обертки на мобильных */
+  /* Скрываем игровое поле на мобильных устройствах */
   #game-wrapper {
-    padding: 8px; /* Используем px для фиксированного размера */
+    display: none !important;
+  }
+
+  /* Скрываем панель управления на мобильных устройствах */
+  #control-panel {
+    display: none !important;
+  }
+
+  /* Показываем сообщение для мобильных устройств */
+  #mobile-message {
+    display: block !important;
+  }
+
+  /* Улучшаем стили сообщения для мобильных */
+  #mobile-message {
+    padding: 25px 30px;
+  }
+
+  #mobile-message p {
+    font-size: 16px;
   }
 }
 
 /* Очень маленькие экраны (< 480px) */
 @media screen and (max-width: 480px) {
-  #instruction-panel {
-    font-size: 10px; /* Используем px для фиксированного размера */
-    padding: 6px 8px; /* Используем px для фиксированного размера */
-    max-width: 288px; /* Используем px для фиксированного размера */
+  /* Дополнительные стили для сообщения на очень маленьких экранах */
+  #mobile-message {
+    padding: 20px 25px;
   }
 
-  #restart-game,
-  #toggle-sound {
-    font-size: 10px; /* Используем px для фиксированного размера */
-    padding: 6px 12px; /* Используем px для фиксированного размера */
-    min-width: 96px; /* Используем px для фиксированного размера */
-  }
-
-  /* Еще меньше padding на очень маленьких экранах */
-  #game-wrapper {
-    padding: 4px; /* Используем px для фиксированного размера */
+  #mobile-message p {
+    font-size: 14px;
   }
 }
